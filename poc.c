@@ -72,13 +72,6 @@ static void prepare_pipe(int p[2])
 
 int main(int argc, char **argv)
 {
-	/*
-	if (argc != 4) {
-		fprintf(stderr, "Usage: %s TARGETFILE OFFSET DATA\n", argv[0]);
-		return EXIT_FAILURE;
-	}
-	*/
-
 	const char *const path = "/etc/passwd";
 	loff_t offset = 1;
 	const char *const data = "oott:";
