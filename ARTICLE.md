@@ -1,5 +1,6 @@
 # CVE-2022-0847 - Dirty Pipe vulnerability
 Originaly written by [CM4all](https://dirtypipe.cm4all.com/)
+
 Converted to Markdown by Peter (me)
 
 Abstract[](#abstract "Permalink to this headline")
